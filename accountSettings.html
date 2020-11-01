@@ -30,30 +30,40 @@
 
             <div class="inner">
                 <div class="image-holder">
-                    <img src="images/asettings.jpg">
+                    <img src="images/apointment.png" height="750" width="550">
                 </div>
                 <form action="">
                     <h3>APPOINTMENT FORM</h3>
+                    
                     <div class="form-group">
-                              <input id="firstName" type="text" placeholder="First Name" class="form-control">
-                              <input id="secondName" type="text" placeholder="Second Name" class="form-control">
+                              <input id="firstName" type="text" placeholder="FIRST NAME" class="form-control">
+                              <input id="secondName" type="text" placeholder="SECOND NAME" class="form-control">
                     </div>
                     <div class="form-wrapper">
+                        <select name="" id="gender" class="form-control">
+                            <option value="" disabled selected>GENDER</option>
+                            <option value="Male">MALE</option>
+                            <option value="Female">FEMALE</option>
+                            <option value="Others">OTHERS</option>
+                        </select>
+                        <i class="zmdi  zmdi-caret-down" style="font-size: 17px;"></i>
+                   </div>
+                    <div class="form-wrapper">
                          <select name="" id="country" class="form-control">
-                             <option value="" disabled selected>Country</option>
-                             <option value="India">Country</option>
-                             <option value="India">India</option>
-                             <option value="South Africa">South Africa</option>
-                             <option value="USA">USA</option>
-                             <option value="England">England</option>
-                             <option value="France">France</option>
-                             <option value="Russia">Russia</option>
-                             <option value="Italy">Italy</option>
+                             <option value="">MEDICAL CONSULTANCY DEPARTMENTS</option>
+                             <option value="CARDIOLOGY">CARDIOLOGY</option>
+                             <option value="DENTAL">DENTAL</option>
+                             <option value="ENT">ENT</option>
+                             <option value="GYNOCOLOGY">GYNOCOLOGY</option>
+                             <option value="NEUROLOGY">NEUROLOGY</option>
+                             <option value="OPTHAMOLOGIST">OPTHAMOLOGIST</option>
+                             <option value="ORTHO">ORTHO</option>
+                             <option value="PEDIATRICIAN">PEDIATRICIAN</option>
                          </select>
                          <i class="zmdi  zmdi-caret-down" style="font-size: 17px;"></i>
                          
                     </div>
-                        <h6>Date : </h6>
+                        <h6>DATE : </h6>
                         <div style="text-align:center;"> <h3><a style="text-decoration:none;"><span style="color:gray;"></span><br /></a></h3> 
                             <iframe src="https://www.zeitverschiebung.net/clock-widget-iframe-v2?language=de&size=medium&timezone=Asia%2FKolkata" width="100%" 
                             height="110" frameborder="0" seamless></iframe> <small style="color:gray;"></small>
@@ -62,8 +72,8 @@
                     
                     <div class="form-wrapper">
                     <select name="" id="time" class="form-control">
-                        <option value="" disabled selected>Appointment Time</option>
-                        <option value="">Appointment Time</option>
+                        <option value="" disabled selected>APPOINTMENT TIME</option>
+                        <option value="">APPOINTMENT TIME</option>
                         <option value="9.00 AM">9.00 AM</option>
                         <option value="9.30 AM">9.30 AM</option>
                         <option value="10.00 AM">10.00 AM</option>
@@ -95,33 +105,24 @@
                         <option value="11.00 PM">11.00 PM</option>
                         <option value="11.30 PM">11.30 PM</option>
                     </select>
-                    <i class="zmdi  zmdi-caret-down" style="font-size: 15px;"></i>
+                    <i class="zmdi  zmdi-caret-down" style="font-size: 17px;"></i>
                    </div>
                     <div class="form-wrapper">
-                        <input id="phone" type="number" placeholder="Phone-Number" class="form-control">
+                        <input id="phone" type="number" placeholder="PHONE-NUMBER" class="form-control">
                         <i class="zmdi  zmdi-tablet-mac"></i>
                     </div>
-                    <div class="form-wrapper">
-                        <select name="" id="gender" class="form-control">
-                            <option value="" disabled selected>Gender</option>
-                            <option value="Male">Male</option>
-                            <option value="Female">Female</option>
-                            <option value="Others">Others</option>
-                        </select>
-                        <i class="zmdi  zmdi-caret-down" style="font-size: 17px;"></i>
-                   </div>
+                   
                    <div class="form-wrapper">
-                    <input id="address" type="text" placeholder="Address" class="form-control">
+                    <input id="address" type="text" placeholder="ADDRESS" class="form-control">
                     <i class="zmdi zmdi-account-box-mail"></i>
                    </div>
                     <div class="form-wrapper">
-                    <input id="bio" type="text" placeholder="Bio-Group" class="form-control">
-                    
+                    <input id="bio" type="text" placeholder="BLOOD-GROUP" class="form-control">     
                      </div>
                     
                     <div class="form-group container-login100-form-btn">
                         <button id="btn-update" type="button">
-                            Update & Set
+                            UPDATE & SET
                             <i class="zmdi zmdi-arrow-right"></i>
                         </button>
 
