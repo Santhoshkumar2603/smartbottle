@@ -1,8 +1,17 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>ACCOUNT SETTING</title>
-        
+        <title>APPOINTMENT FORM</title>
+
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
+
+
+
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
@@ -24,7 +33,7 @@
                     <img src="images/asettings.jpg">
                 </div>
                 <form action="">
-                    <h3>ACCOUNT SETTING</h3>
+                    <h3>APPOINTMENT FORM</h3>
                     <div class="form-group">
                               <input id="firstName" type="text" placeholder="First Name" class="form-control">
                               <input id="secondName" type="text" placeholder="Second Name" class="form-control">
@@ -32,6 +41,7 @@
                     <div class="form-wrapper">
                          <select name="" id="country" class="form-control">
                              <option value="" disabled selected>Country</option>
+                             <option value="India">Country</option>
                              <option value="India">India</option>
                              <option value="South Africa">South Africa</option>
                              <option value="USA">USA</option>
@@ -41,9 +51,54 @@
                              <option value="Italy">Italy</option>
                          </select>
                          <i class="zmdi  zmdi-caret-down" style="font-size: 17px;"></i>
+                         
                     </div>
+                        <h6>Date : </h6>
+                        <div style="text-align:center;"> <h3><a style="text-decoration:none;"><span style="color:gray;"></span><br /></a></h3> 
+                            <iframe src="https://www.zeitverschiebung.net/clock-widget-iframe-v2?language=de&size=medium&timezone=Asia%2FKolkata" width="100%" 
+                            height="110" frameborder="0" seamless></iframe> <small style="color:gray;"></small>
+                         </div>
+                
+                    
                     <div class="form-wrapper">
-                        <input id="phone" type="number" placeholder="Phone" class="form-control">
+                    <select name="" id="time" class="form-control">
+                        <option value="" disabled selected>Appointment Time</option>
+                        <option value="">Appointment Time</option>
+                        <option value="9.00 AM">9.00 AM</option>
+                        <option value="9.30 AM">9.30 AM</option>
+                        <option value="10.00 AM">10.00 AM</option>
+                        <option value="10.30 AM">10.30 AM</option>
+                        <option value="11.00 AM">11.00 AM</option>
+                        <option value="11.30 AM">11.30 AM</option>
+                        <option value="12.00 PM">12.00 PM</option>
+                        <option value="12.30 PM">12.30 PM</option>
+                        <option value="1.00 PM">1.00 PM</option>
+                        <option value="1.30 PM">1.30 PM</option>
+                        <option value="2.00 PM">2.00 PM</option>
+                        <option value="2.30 PM">2.30 PM</option>
+                        <option value="3.00 PM">3.00 PM</option>
+                        <option value="3.30 PM">3.30 PM</option>
+                        <option value="4.00 PM">4.00 PM</option>
+                        <option value="4.30 PM">4.30 PM</option>
+                        <option value="5.00 PM">5.00 PM</option>
+                        <option value="5.30 PM">5.30 PM</option>
+                        <option value="6.00 PM">6.00 PM</option>
+                        <option value="6.30 PM">6.30 PM</option>
+                        <option value="7.00 PM">7.00 PM</option>
+                        <option value="7.30 PM">7.30 PM</option>
+                        <option value="8.00 PM">8.00 PM</option>
+                        <option value="8.30 PM">8.30 PM</option>
+                        <option value="9.00 PM">9.00 PM</option>
+                        <option value="9.30 PM">9.30 PM</option>
+                        <option value="10.00 PM">10.00 PM</option>
+                        <option value="10.30 PM">10.30 PM</option>
+                        <option value="11.00 PM">11.00 PM</option>
+                        <option value="11.30 PM">11.30 PM</option>
+                    </select>
+                    <i class="zmdi  zmdi-caret-down" style="font-size: 15px;"></i>
+                   </div>
+                    <div class="form-wrapper">
+                        <input id="phone" type="number" placeholder="Phone-Number" class="form-control">
                         <i class="zmdi  zmdi-tablet-mac"></i>
                     </div>
                     <div class="form-wrapper">
@@ -60,9 +115,10 @@
                     <i class="zmdi zmdi-account-box-mail"></i>
                    </div>
                     <div class="form-wrapper">
-                    <input id="bio" type="text" placeholder="Bio" class="form-control">
-                    <i class="zmdi zmdi-pin"></i>
+                    <input id="bio" type="text" placeholder="Bio-Group" class="form-control">
+                    
                      </div>
+                    
                     <div class="form-group container-login100-form-btn">
                         <button id="btn-update" type="button">
                             Update & Set
@@ -70,6 +126,7 @@
                         </button>
 
                     </div>
+                  
                     
 
                 </form>
@@ -84,25 +141,7 @@
 
 
         <script src="js/index.js"></script>
-        <script>
-               firebase.auth().onAuthStateChanged(function(user)
-               {
-                      if(user)
-                      {
-                          var userID = firebase.auth().currentUser.uid;
-
-                          firebase.database().ref('Users/' + userID).once('value').then(function(snapshot)
-                          {
-                                    if(snapshot.val())
-                                    {
-                                        window.location.href ="Mainpage.html";
-                                    }
-                                
-                          });
-                      }
-               });
-               
-        </script>
+       
 
     </body>
 </html>

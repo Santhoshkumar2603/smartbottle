@@ -121,12 +121,13 @@ $("#btn-update").click(function()
        var sName=$("#secondName").val();
        var country=$("#country").val();
        var gender=$("#gender").val();
+       var time=$("#time").val();
          
        var rootRef =firebase.database().ref().child("Users");
        var userID = firebase.auth().currentUser.uid;
        var usersRef= rootRef.child(userID);
         
-       if(fName !="" && sName !="" && phone!="" && address !="" && bio !="" && country!=""&& gender !="" )
+       if(fName !="" && sName !="" && phone!="" && address !="" && bio !="" && country!=""&& gender !=""&& time!="" )
        {
                  var userData =
                  {
@@ -137,6 +138,7 @@ $("#btn-update").click(function()
                       "secondName":sName,
                       "country":country,
                       "gender":gender,
+                      "time":time,
 
                  }
                  console.log(userData)
@@ -153,12 +155,12 @@ $("#btn-update").click(function()
                    }
                    else
                    {
-                    window.location.href ="Mainpage.html";
+                    window.location.href ="Mainpge.html";
                    }
      
                  });
                  {
-                    window.location.href ="Mainpage.html";
+                    window.location.href ="Mainpge.html";
                  }
        }
        else
