@@ -122,25 +122,31 @@ $("#btn-update").click(function()
        var country=$("#country").val();
        var gender=$("#gender").val();
        var time=$("#time").val();
+       var city=$("#city").val();
+       var state=$("#state").val();
          
        var rootRef =firebase.database().ref().child("Users");
-       var userID = firebase.auth().currentUser.uid;
-       var usersRef= rootRef.child(userID);
+      var userID = firebase.auth().currentUser.uid;
+       var usersRef= rootRef.child(fName+country+userID);
         
-       if(fName !="" && sName !="" && phone!="" && address !="" && bio !="" && country!=""&& gender !=""&& time!="" )
+       if(fName !="" && sName !="" && city!=""&& state!=""&&phone!="" && address !="" && bio !="" && country!=""&& gender !=""&& time!="" )
        {
+                 
                  var userData =
                  {
                       "phone":phone,
                       "address":address,
-                      "bio":bio,
-                      "firstName":fName,
-                      "secondName":sName,
-                      "country":country,
+                      "bloodgroup":bio,
+                      "Name":fName,
+                      "Age":sName,
+                      "department":country,
                       "gender":gender,
                       "time":time,
+                      "dob":city,
+                      "state":state,
 
                  }
+                
                  console.log(userData)
                  usersRef.set(userData,function()
                  {
@@ -155,12 +161,12 @@ $("#btn-update").click(function()
                    }
                    else
                    {
-                    window.location.href ="Mainpge.html";
+                    window.location.href ="index.html";
                    }
      
                  });
                  {
-                    window.location.href ="Mainpge.html";
+                    window.location.href ="index.html";
                  }
        }
        else

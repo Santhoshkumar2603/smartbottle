@@ -1,57 +1,126 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>APPOINTMENT FORM</title>
+<html lang="en">
 
-
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
-
-
-
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-            
-            <!-- MATERIAL DESIGN ICONIC FONT -->
-        <link rel="stylesheet" href="fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
-                
-                <!-- STYLE CSS -->
-        <link rel="stylesheet" href="css/style.css">
+<head>
+    <meta charset="utf-8">
+    <title>Profile</title>
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
         <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
         <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-database.js"></script>
         <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-storage.js"></script>
-    <body>
-        <div class="wrapper" style="background-image: url('images/accountSettingsback.jpg');">
+     
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
 
-            <div class="inner">
-                <div class="image-holder">
-                    <img src="images/apointment.png" height="750" width="550">
-                </div>
-                <form action="">
-                    <h3>APPOINTMENT FORM</h3>
-                    
-                    <div class="form-group">
-                              <input id="firstName" type="text" placeholder="FIRST NAME" class="form-control">
-                              <input id="secondName" type="text" placeholder="SECOND NAME" class="form-control">
-                    </div>
-                    <div class="form-wrapper">
-                        <select name="" id="gender" class="form-control">
-                            <option value="" disabled selected>GENDER</option>
-                            <option value="Male">MALE</option>
-                            <option value="Female">FEMALE</option>
-                            <option value="Others">OTHERS</option>
-                        </select>
-                        <i class="zmdi  zmdi-caret-down" style="font-size: 17px;"></i>
-                   </div>
-                    <div class="form-wrapper">
-                         <select name="" id="country" class="form-control">
-                             <option value="">MEDICAL CONSULTANCY DEPARTMENTS</option>
-                             <option value="CARDIOLOGY">CARDIOLOGY</option>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@700&display=swap" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+    
+   <style>
+        body{
+            font-style: normal;
+            font-family: 'Work Sans', sans-serif;
+        }
+
+        #santh{
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            
+        }
+        form {
+            margin: 0% 20% 10% 20%;
+        }
+        .title{
+    display: flex;
+    font-family: 'Times New Roman', Times, serif;
+    /* color: red; */
+}
+
+.title i{
+    color: red;
+
+}
+
+.title-underline{
+    height: 3px;
+    width: 14%;
+
+    background-color: var(--primary-color);
+    margin: 0 0 3em 0;
+}
+    </style>
+</head>
+
+<body>
+
+
+   
+
+        <div class="dashboard-main-container ">
+            <div class="title">
+                <h3>Nanga Irukom</h3>
+                <i class="material-icons">local_hospital</i>
+        </div>
+            
+            <div class="title-underline"></div>
+
+
+    <div class="wrapper" id="santh" style="background-image: url('img/apoitment.png');">
+
+    <div class="d-flex" style="margin-top: 50px;">
+        <h4 class="mx-auto" style="font-size: 40px; font-family: 'Red Hat Display', sans-serif;">APPOINTMENT FORM</h4>    
+    </div>
+    <div class="d-flex" style="margin-top: 10px;">
+        <img class="mx-auto" src="images/apointment.png" alt="" height="200px"><br>
+    </div>
+    <form action="">
+        <div class="form-group">
+            <label>Name</label>
+            <input class="form-control" type="text" placeholder="" id="firstName">
+            <label>D.O.B (dd-mm-yyyy)</label>
+            <input class="form-control" type="text" placeholder="" id="city">
+            <label>Age</label>
+            <div class="row">
+            <div class="col-6">    
+            <input class="form-control" type="number" placeholder="" id="secondName">
+            </div>
+            
+            <div class="dropdown col-6">
+                
+                <select class="btn btn-info dropdown-toggle" name="" id="gender" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <option value="">Gender</option>
+                    <option value="Male">MALE</option>
+                    <option value="Female">FEMALE</option>
+                    <option value="Others">OTHERS</option>
+                </select>
+                
+           </div>
+           
+          
+         </div>
+
+         
+                       
+         <div class="form-group">
+        
+            <label>Blood-group</label>
+            <div class="row">
+            <div class="col-6">    
+            <input class="form-control" type="text" placeholder="" id="bio">
+            </div>
+            
+            <div class="dropdown col-6">
+               
+                <select class="btn btn-info dropdown-toggle" name="" id="country" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <option value="">MEDICAL CONSULTANCY DEPARTMENT</option>
+                    <option value="CARDIOLOGY">CARDIOLOGY</option>
                              <option value="DENTAL">DENTAL</option>
                              <option value="ENT">ENT</option>
                              <option value="GYNOCOLOGY">GYNOCOLOGY</option>
@@ -59,21 +128,36 @@
                              <option value="OPTHAMOLOGIST">OPTHAMOLOGIST</option>
                              <option value="ORTHO">ORTHO</option>
                              <option value="PEDIATRICIAN">PEDIATRICIAN</option>
-                         </select>
-                         <i class="zmdi  zmdi-caret-down" style="font-size: 17px;"></i>
-                         
-                    </div>
-                        <h6>DATE : </h6>
-                        <div style="text-align:center;"> <h3><a style="text-decoration:none;"><span style="color:gray;"></span><br /></a></h3> 
-                            <iframe src="https://www.zeitverschiebung.net/clock-widget-iframe-v2?language=de&size=medium&timezone=Asia%2FKolkata" width="100%" 
-                            height="110" frameborder="0" seamless></iframe> <small style="color:gray;"></small>
-                         </div>
+                </select>
                 
-                    
-                    <div class="form-wrapper">
-                    <select name="" id="time" class="form-control">
-                        <option value="" disabled selected>APPOINTMENT TIME</option>
-                        <option value="">APPOINTMENT TIME</option>
+           </div>
+           
+          
+         </div>
+             <label>Phone Number</label>
+            <input class="form-control" type="text" placeholder="" id="phone">
+            <label>Address</label>
+            <textarea class="form-control" placeholder="" id="address" cols="15" rows="4"></textarea>
+            
+            <label>State</label>
+            <input class="form-control" type="text" placeholder="" id="state">
+
+        </div>
+        <div class="form-group">
+        
+        
+            <div class="row">
+            <div class="col-6">    
+                <div style="text-align:center;"> <h5><a style="text-decoration:none;">Date<span style="color:blue;"></span><br /></a></h5> 
+                    <iframe src="https://www.zeitverschiebung.net/clock-widget-iframe-v2?language=de&size=medium&timezone=Asia%2FKolkata" width="100%" 
+                    height="110" frameborder="0" seamless></iframe> <small style="color:blue;"></small>
+                 </div>
+            </div>
+    
+            <div class="dropdown col-6">
+                
+                <select class="btn btn-info dropdown-toggle" name="" id="time" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <option value="">FIX APPOINTMENT TIME</option>
                         <option value="9.00 AM">9.00 AM</option>
                         <option value="9.30 AM">9.30 AM</option>
                         <option value="10.00 AM">10.00 AM</option>
@@ -104,45 +188,31 @@
                         <option value="10.30 PM">10.30 PM</option>
                         <option value="11.00 PM">11.00 PM</option>
                         <option value="11.30 PM">11.30 PM</option>
-                    </select>
-                    <i class="zmdi  zmdi-caret-down" style="font-size: 17px;"></i>
-                   </div>
-                    <div class="form-wrapper">
-                        <input id="phone" type="number" placeholder="PHONE-NUMBER" class="form-control">
-                        <i class="zmdi  zmdi-tablet-mac"></i>
-                    </div>
-                   
-                   <div class="form-wrapper">
-                    <input id="address" type="text" placeholder="ADDRESS" class="form-control">
-                    <i class="zmdi zmdi-account-box-mail"></i>
-                   </div>
-                    <div class="form-wrapper">
-                    <input id="bio" type="text" placeholder="BLOOD-GROUP" class="form-control">     
-                     </div>
-                    
-                    <div class="form-group container-login100-form-btn">
-                        <button id="btn-update" type="button">
-                            UPDATE & SET
-                            <i class="zmdi zmdi-arrow-right"></i>
-                        </button>
-
-                    </div>
-                  
-                    
-
-                </form>
+                </select>
                 
-
-
-            </div>
-            
-
-        </div>
-
-
-
-        <script src="js/index.js"></script>
+           </div>
+           
+          
+         </div>
        
+        <button class="btn btn-primary" type="button" id="btn-update">Submit</button>
 
-    </body>
+    </form>
+</div>
+   
+</div>
+</div>
+
+</div>
+
+    <script src="js/index.js"></script>
+    <!-- <script>
+        function getInputValue() {
+
+            var fName = document.getElementById("fname").value;
+            alert(fName);
+        }
+    </script> -->
+</body>
+
 </html>
