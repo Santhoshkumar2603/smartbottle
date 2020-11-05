@@ -1,74 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
-
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
-<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-database.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-storage.js"></script>
-
-    <!-- bootstrap css -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-
-    <!-- google material-icons -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-    <link rel="stylesheet" href="css/sanjay.css">
-</head>
-<body>
-
-    <div class="root">
+<html>
+    <head>
+        <title>SIGN-UP</title>
         
-        <div class="side-nav ">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
             
-            <a href="/index.html" class="menu-icon menu-selected"><i class="material-icons">local_pharmacy</i></a>
-            <label>Dashboard</label>
-            <a href="" class="menu-icon"><i class="material-icons">chat</i></a>
-            <label>Chatbox</label>
-            <a href="" class="menu-icon"><i class="material-icons">edit</i></a>
-            <label>Appointment-Form</label>
-            <a href="/contact.html" class="menu-icon"><i class="material-icons">phone</i></a>
-            <label>Contact</label>
-            <a href="" class="menu-icon"><i class="material-icons">tv</i></a>
-            <label>Appointment-Booked</label>
-            <a href="" class="menu-icon" id="btn-logout"><i class="material-icons">logout</i></a>
-            <label>Logout</label>
-        </div>
-
-        <div class="dashboard-main-container ">
-            <div class="title">
-                <h3>Nanga Irukom</h3>
-                <i class="material-icons">local_hospital</i>
-        </div>
-            
-            <div class="title-underline"></div>
-           
-
-           
-           
+            <!-- MATERIAL DESIGN ICONIC FONT -->
+        <link rel="stylesheet" href="fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
                 
+                <!-- STYLE CSS -->
+        <link rel="stylesheet" href="css/style.css">
+        <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-database.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-storage.js"></script>
+    <body>
+        <div class="wrapper" style="background-image: url('images/registerback.jpg');">
+
+            <div class="inner">
+                <div class="image-holder">
+                    <img src="images/registration-form-1.jpg">
+                </div>
+                <form action="">
+                    <h3>REGISTER</h3>
+                    <div class="form-wrapper">
+                              <input id="email" type="email" placeholder="Email address" class="form-control">
+                              <i class="zmdi  zmdi-email"></i>
+                    </div>
+                    <div class="form-wrapper">
+                        <input id="password" type="password" placeholder="password" class="form-control">
+                        <i class="zmdi  zmdi-lock"></i>
+                    </div>
+                    <div class="form-wrapper">
+                        <input id="comfirmpassword" type="password" placeholder="comfirm password" class="form-control">
+                        <i class="zmdi  zmdi-lock"></i>
+                    </div>
+                    <div class="form-group container-login100-form-btn">
+                        <button id="btn-signup" type="button">
+                            Register
+                            <i class="zmdi  zmdi-arrow-right"></i>
+                        </button>
+
+                    </div>
+                    <div class="w-full text-center" style="margin-top: 49%; font-size: 15px;">
+                        <a href="signin.html" class="text-dark">
+                               Already have an account?
+                        </a>
+
+                    </div>
+
+                </form>
+                
+
+
             </div>
-        </div>
         
-    </div>
-    <script src="js/index.js"></script>
-   <!-- <script>
-        firebase.auth().onAuthStateChanged(function(user)
-        {
-             if(!user)
-             {
-                 window.location.href = "signin.html";
-             }
-        });
- </script>-->
-    
-</body>
+        </div>
+
+        <script src="js/index.js"></script>
+        <script>
+            firebase.auth().onAuthStateChanged(function(user)
+            {
+                   if(user)
+                   {
+                       var userID = firebase.auth().currentUser.uid;
+
+                       firebase.database().ref('Users/' + userID).once('value').then(function(snapshot)
+                       {
+                                 if(snapshot.val())
+                                 {
+                                     window.location.href ="index.html";
+                                 }
+                                 else
+                                 {
+                                     window.location.href = "index.html";
+                                 }
+                       });   
+                   }
+            });
+            
+     </script>
+    </body>
 </html>
