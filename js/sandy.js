@@ -23,7 +23,7 @@ rootRef.on("child_added",snap => {
     var dept = snap.child("department").val();
     var phone = snap.child("phone").val();
     var address = snap.child("address").val();
-    var city = snap.child("city").val();
+    var city = snap.child("dob").val();
     var state = snap.child("state").val();
     var time = snap.child("time").val();
     
