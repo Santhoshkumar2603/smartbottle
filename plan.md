@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>Patient-Form</title>
-    
+    <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
         <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
@@ -23,6 +23,7 @@
 
     
    <style>
+       
         body{
             font-style: normal;
             font-family: 'Work Sans', sans-serif;
@@ -65,11 +66,11 @@
 
         <div class="dashboard-main-container ">
             <div class="title">
-                <h3>Smart Bottle</h3>
+                <h3>SmartBottle</h3>
                 <i class="material-icons">local_hospital</i>
-             </div>
+        </div>
             
-            <div class="title-underline"></div>
+        <div class="title-underline"></div>
 
 
     <div class="wrapper" id="santh" style="background-image: url('img/apoitment.png');">
@@ -82,7 +83,7 @@
     </div>
     <form action="">
         <div class="form-group">
-            <div class="dropdown col-6">
+           
                 
                 <select class="btn btn-info dropdown-toggle" name="" id="no" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <option value="">BED NO</option>
@@ -98,8 +99,7 @@
                     <option value="10">10</option>
                 </select>
                 
-           </div>
-           <br>
+           
             <label>Name</label>
             <input class="form-control" type="text" placeholder="" id="firstName">
             <label>D.O.B (dd-mm-yyyy)</label>
@@ -137,8 +137,8 @@
             <div class="dropdown col-6">
                
                 <select class="btn btn-info dropdown-toggle" name="" id="country" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <option value="">MEDICAL CONDITION</option>
-                    <option value="CARDIOLOGY">CARDIOLOGY</option>
+                             <option value="">Disease</option>
+                             <option value="CARDIOLOGY">CARDIOLOGY</option>
                              <option value="DENTAL">DENTAL</option>
                              <option value="ENT">ENT</option>
                              <option value="GYNOCOLOGY">GYNOCOLOGY</option>
@@ -151,30 +151,77 @@
                 
            </div>
            
-          
-         </div>
+         <div>
              <label>Phone Number</label>
-            <input class="form-control" type="text" placeholder="" id="phone">
-            <label>IV Type</label>
+            <input class="form-control" type="text" placeholder="" id="phone">     
+            <label>IV Name</label>
             <input class="form-control" type="text" placeholder="" id="state">
-            <label>Final IV Value</label>
-            <input class="form-control" type="text" placeholder="" id="finaliv">
-            <label>Current IV Value</label>
-            <input class="form-control" type="text" placeholder="" id="currentiv">
 
-        </div>
+         </div>
         <div class="form-group">
-        
-        
             <div class="row">
-            <div class="col-6">               
+            <div class="col-6">    
+                <div style="text-align:center;"> <h5><a style="text-decoration:none;">Date<span style="color:blue;"></span><br /></a></h5> 
+                    <iframe src="https://www.zeitverschiebung.net/clock-widget-iframe-v2?language=de&size=medium&timezone=Asia%2FKolkata" width="100%" 
+                    height="110" frameborder="0" seamless></iframe> <small style="color:blue;"></small>
+                 </div>
             </div>
     
+            <div class="dropdown col-6">
+                
+                <select class="btn btn-info dropdown-toggle" name="" id="time" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <option value="">FIX APPOINTMENT TIME</option>
+                        <option value="9.00 AM">9.00 AM</option>
+                        <option value="9.30 AM">9.30 AM</option>
+                        <option value="10.00 AM">10.00 AM</option>
+                        <option value="10.30 AM">10.30 AM</option>
+                        <option value="11.00 AM">11.00 AM</option>
+                        <option value="11.30 AM">11.30 AM</option>
+                        <option value="12.00 PM">12.00 PM</option>
+                        <option value="12.30 PM">12.30 PM</option>
+                        <option value="1.00 PM">1.00 PM</option>
+                        <option value="1.30 PM">1.30 PM</option>
+                        <option value="2.00 PM">2.00 PM</option>
+                        <option value="2.30 PM">2.30 PM</option>
+                        <option value="3.00 PM">3.00 PM</option>
+                        <option value="3.30 PM">3.30 PM</option>
+                        <option value="4.00 PM">4.00 PM</option>
+                        <option value="4.30 PM">4.30 PM</option>
+                        <option value="5.00 PM">5.00 PM</option>
+                        <option value="5.30 PM">5.30 PM</option>
+                        <option value="6.00 PM">6.00 PM</option>
+                        <option value="6.30 PM">6.30 PM</option>
+                        <option value="7.00 PM">7.00 PM</option>
+                        <option value="7.30 PM">7.30 PM</option>
+                        <option value="8.00 PM">8.00 PM</option>
+                        <option value="8.30 PM">8.30 PM</option>
+                        <option value="9.00 PM">9.00 PM</option>
+                        <option value="9.30 PM">9.30 PM</option>
+                        <option value="10.00 PM">10.00 PM</option>
+                        <option value="10.30 PM">10.30 PM</option>
+                        <option value="11.00 PM">11.00 PM</option>
+                        <option value="11.30 PM">11.30 PM</option>
+                </select>
+                
+           </div>
+           
           
          </div>
        
         <button class="btn btn-primary" type="button" id="btn-update">Submit</button>
 
+       <!--  <p>
+            <i class="far fa-clock" style="font-size:1.0rem;color:#e3a8c7;"></i>
+            <span style="font-size:1.0rem;">Time : </span>
+            <span id="time" style="font-size:1.0rem;"></span>
+            <br>
+            <i class="far fa-calendar-alt" style="font-size:1.0rem;color:#f7dc68";></i>
+            <span style="font-size:1.0rem;">Date : </span>
+            <span id="date" style="font-size:1.0rem;"></span>
+         </p>
+        <button class="btn btn-primary" type="button" id="btn-update">Submit</button>-->
+
+        
     </form>
 </div>
    
@@ -184,13 +231,21 @@
 </div>
 
     <script src="js/index.js"></script>
-    <!-- <script>
-        function getInputValue() {
+     <script>
+         setInterval(function() {
+        // Call a function repetatively with 1 Second interval
+        Time_Date();
+      }, 1000);
 
-            var fName = document.getElementById("fname").value;
-            alert(fName);
-        }
-    </script> -->
+      function Time_Date() {
+        var t = new Date();
+        document.getElementById("time").innerHTML = t.toLocaleTimeString();
+        var d = new Date();
+        const dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday","Saturday"];
+        const monthNames = ["January", "February", "March", "April", "May", "June","July", "August", "September", "October", "November", "December"];
+        document.getElementById("date").innerHTML = dayNames[d.getDay()] + ", " + d.getDate() + "-" + monthNames[d.getMonth()] + "-" + d.getFullYear();
+      }
+    </script>
 </body>
 
 </html>

@@ -1,12 +1,12 @@
 var firebaseConfig = {
-    apiKey: "AIzaSyDstn0y3uLlMCXC2ITsWBbblT3JIuAih80",
-    authDomain: "nallaerupom-96758.firebaseapp.com",
-    databaseURL: "https://nallaerupom-96758.firebaseio.com",
-    projectId: "nallaerupom-96758",
-    storageBucket: "nallaerupom-96758.appspot.com",
-    messagingSenderId: "456782876188",
-    appId: "1:456782876188:web:347f8ea0aa408324b199d9",
-    measurementId: "G-2LV5JX102J"
+     apiKey: "AIzaSyBRQx2a8ZCG9GebhRILk-7ZONzZimNmMEE",
+     authDomain: "mindbenders-8d230.firebaseapp.com",
+     databaseURL: "https://mindbenders-8d230.firebaseio.com",
+     projectId: "mindbenders-8d230",
+     storageBucket: "mindbenders-8d230.appspot.com",
+     messagingSenderId: "178370620970",
+     appId: "1:178370620970:web:9345abfb15fd26bd381d53"
+ 
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
@@ -135,36 +135,38 @@ inputs.forEach(input => {
    
 $("#btn-update").click(function()
 {
+       var no = $("#no").val();
        var phone =$("#phone").val();
-       var address  =$("#address").val();
+       var finaliv =$("#finaliv").val();
        var bio =$("#bio").val();
        var fName=$("#firstName").val();
        var sName=$("#secondName").val();
        var country=$("#country").val();
        var gender=$("#gender").val();
-       var time=$("#time").val();
+       var currentiv=$("#currentiv").val();
        var city=$("#city").val();
        var state=$("#state").val();
          
-       var rootRef =firebase.database().ref().child("Users");
-      var userID = firebase.auth().currentUser.uid;
-       var usersRef= rootRef.child(fName+country+userID);
+       var rootRef =firebase.database().ref().child("Patient");
+       var userID = firebase.auth().currentUser.uid;
+       var usersRef= rootRef.child(no);
         
-       if(fName !="" && sName !="" && city!=""&& state!=""&&phone!="" && address !="" && bio !="" && country!=""&& gender !=""&& time!="" )
+       if(finaliv != "" && currentiv != "" && userID != "" && fName !="" && sName !="" && city!=""&& state!=""&&phone!="" && bio !="" && country!=""&& gender !="")
        {
                  
                  var userData =
                  {
-                      "phone":phone,
-                      "address":address,
-                      "bloodgroup":bio,
-                      "Name":fName,
-                      "Age":sName,
-                      "department":country,
-                      "gender":gender,
-                      "time":time,
-                      "dob":city,
-                      "state":state,
+                      "patientid":no,
+                      "patientphone":phone,
+                      "patientivfinalvalue":finaliv,
+                      "patientbloodgrp":bio,
+                      "patientname":fName,
+                      "patientage":sName,
+                      "patientmedicalcondition":country,
+                      "patientgender":gender,
+                      "patientcurrentiv":currentiv,
+                      "patientdob":city,
+                      "patientivname":state,
 
                  }
                 
